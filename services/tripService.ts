@@ -1,6 +1,6 @@
 import { collection, addDoc, getDocs, query, where, deleteDoc, doc } from 'firebase/firestore';
 import { db } from './firebaseConfig';
-import { Trip } from '../types/trip';
+import { Trip } from '../types/Trip';
 
 export const addTrip = async (trip: Trip) => {
     await addDoc(collection(db, 'trips'), trip);
